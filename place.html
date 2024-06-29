@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+            rel="stylesheet">
+
+        <title>WDD 131 - Dynamic Web Fundamentals - Jales Nunes</title>
+
+        <meta name="description"
+            content="WDD 131 - Dynamic Web Fundamentals - Jales Nunes - Learning how to create dynamic, responsive websites using JavaScript to handle events and update content. Building on web fundamentals and programming skills. Developing teamwork abilities like communication and collaboration.">
+        <meta name="author" content="Jales Nunes">
+
+        <link rel="stylesheet" href="./styles/place.css">
+        <link rel="stylesheet" href="./styles/place-large.css">
+
+        <script src="scripts/place.js" defer></script>
+        <script src="scripts/getdates.js" defer></script>
+    </head>
+    <body>
+        <div class="wrapper">
+
+            <header>
+                <h1>Madagascar</h1>
+            </header>
+
+            <main>
+                <section class="hero">
+                    <picture>
+                        <source srcset="hero-large.webp"
+                            media="(min-width: 800px)">
+                        <source srcset="hero-medium.webp"
+                            media="(min-width: 500px)">
+                        <img src="./images/hero-small.webp" alt="Hero Image"
+                            class="hero-image">
+                    </picture>
+                </section>
+
+                <section class="data">
+                    <h2>Data</h2>
+                    <ul>
+                        <li>
+                            <strong>Area:</strong>
+                            587,041 sq km</li>
+                        <li><strong>Population:</strong> 27,691.018
+                        </li>
+                        <li>
+                            <strong>Capital:</strong>
+                            Antananarivo
+                        </li>
+                        <li><strong>Languages:</strong> Malagasy, French</li>
+                        <li><strong>Currency:</strong> Malagasy Ariary</li>
+                        <li><strong>Time Zone:</strong> UTC+3</li>
+                        <li><strong>Calling Code:</strong> +261</li>
+                        <li><strong>Internet TLD:</strong> .mg</li>
+                    </ul>
+                </section>
+
+                <section class="weather">
+                    <h2>Weather</h2>
+                    <ul>
+                        <li>
+                            <strong>Temperature:</strong>
+                            10°C
+                        </li>
+                        <li>
+                            <strong>Conditions:</strong>
+                            Partly Cloudy
+                        </li>
+                        <li>
+                            <strong>Wind:</strong>
+                            5 km/h
+                        </li>
+                        <li>
+                            <strong>Wind Chill:</strong>
+                            9.8°C
+                        </li>
+                    </ul>
+                </section>
+            </main>
+
+            <footer>
+                <p>Copyright &copy; <span id="currentyear"></span> Jales
+                    Nunes,
+                    Utah - US</p>
+                <p id="lastModified"></p>
+            </footer>
+        </div>
+    </body>
+</html>
