@@ -1,0 +1,121 @@
+@media (min-width: 800px) {
+    header {
+        height: auto;
+        padding: 2rem;
+    }
+   main {
+        position: relative;
+        overflow: hidden; /* Prevent overflow */
+        max-height: calc(100vh - 100px);
+    }
+
+    .data {
+        background-color: #fff;
+        opacity: 0.7;
+        padding: 2rem;
+        position: absolute;
+        top: 50px;
+        left: 50px;
+
+        border-radius: 12px;
+    }
+
+    h2 {
+        width: 10rem;
+        height: 4rem;
+        background-color: #2E8B57;
+        color: #fff;
+
+        display: flex;
+        align-items: center;
+        padding: .5rem;
+
+        position: absolute;
+        top: 12px;
+        left: -15px;
+
+        border-radius: 5px;
+    }
+
+     ul {
+        margin-top: 5rem;
+    }
+
+    .weather {
+        background-color: #fff;
+        opacity: 0.7;
+        padding: 2rem;
+        position: absolute;
+        bottom: 50px;
+        right: 50px;
+
+        border-radius: 12px;
+    }
+
+    footer {
+        margin: 0;
+        height: auto;
+        padding: 3rem;
+    }
+  }
+
+@media (min-width: 1100px) {
+    header {
+        height: auto;
+        padding: .8rem;
+    }
+   main {
+        position: relative;
+        overflow: hidden; /* Prevent overflow */
+        max-height: calc(100vh - 100px);
+    }
+
+    .data {
+        background-color: #fff;
+        opacity: 0.7;
+        padding: 2rem;
+        position: absolute;
+        top: 50px;
+        left: 50px;
+
+        border-radius: 12px;
+    }
+
+    h2 {
+        width: 10rem;
+        height: 4rem;
+        background-color: #2E8B57;
+        color: #fff;
+
+        display: flex;
+        align-items: center;
+        padding: .5rem;
+
+        position: absolute;
+        top: 12px;
+        left: -15px;
+
+        border-radius: 5px;
+    }
+
+     ul {
+        margin-top: 5rem;
+    }
+
+    .weather {
+        background-color: #fff;
+        opacity: 0.7;
+        padding: 2rem;
+        position: absolute;
+        bottom: 50px;
+        right: 50px;
+
+        border-radius: 12px;
+    }
+
+    footer {
+        margin: 0;
+        height: auto;
+        padding: .8rem;
+    }
+  }
