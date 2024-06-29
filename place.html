@@ -1,26 +1,24 @@
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
+      rel="stylesheet">
 
     <title>WDD 131 - Dynamic Web Fundamentals - Jales Nunes</title>
 
     <meta
       name="description"
-      content="WDD 131 - Dynamic Web Fundamentals - Jales Nunes - Learning how to create dynamic, responsive websites using JavaScript to handle events and update content. Building on web fundamentals and programming skills. Developing teamwork abilities like communication and collaboration."
-    />
-    <meta name="author" content="Jales Nunes" />
+      content="WDD 131 - Dynamic Web Fundamentals - Jales Nunes - Learning how to create dynamic, responsive websites using JavaScript to handle events and update content. Building on web fundamentals and programming skills. Developing teamwork abilities like communication and collaboration.">
+    <meta name="author" content="Jales Nunes">
 
-    <link rel="stylesheet" href="./styles/place.css" />
-    <link rel="stylesheet" href="./styles/place-large.css" />
+    <link rel="stylesheet" href="./styles/place.css">
+    <link rel="stylesheet" href="./styles/place-large.css">
 
     <script src="scripts/place.js" defer></script>
     <script src="scripts/getdates.js" defer></script>
@@ -33,13 +31,14 @@
 
       <main>
         <section class="hero">
+          <h3>.</h3>
           <picture>
-            <source srcset="./images/hero-large.webp" media="(min-width: 800px)" />
+            <source srcset="./images/hero-large.webp"
+              media="(min-width: 800px)">
             <img
               src="./images/hero-small.webp"
               alt="Hero Image"
-              class="hero-image"
-            />
+              class="hero-image">
           </picture>
         </section>
 
@@ -80,10 +79,19 @@
 
         <section class="weather">
           <h2>Weather</h2>
+          <picture>
+            <source srcset="./images/partly-cloudy-small.png"
+              media="(min-width: 800px)">
+            <img
+              src="./images/partly-cloudy-large.png"
+              alt="partly cloudy"
+              class="partly-cloudy">
+          </picture>
           <ul>
             <li>
               <strong>Temperature:</strong>
-              10°C
+              <span id="temp"></span>
+              °C
             </li>
             <li>
               <strong>Conditions:</strong>
@@ -91,11 +99,13 @@
             </li>
             <li>
               <strong>Wind:</strong>
-              5 km/h
+              <span id="wind"> </span>
+              km/h
             </li>
             <li>
               <strong>Wind Chill:</strong>
-              9.8°C
+              <span id="wind-chill">9.8</span>
+  
             </li>
           </ul>
         </section>

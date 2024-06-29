@@ -50,6 +50,12 @@ h2 {
   margin-bottom: 1rem;
 }
 
+h3 {
+  opacity: 0;
+  visibility: hidden;
+  display: none;
+}
+
 ul {
   display: flex;
   flex-direction: column;
