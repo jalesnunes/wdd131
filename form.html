@@ -1,101 +1,84 @@
 <!DOCTYPE html>
 <html lang="en-US">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
-            rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-        <title>WDD 131 - Dynamic Web Fundamentals - Jales Nunes</title>
+    <title>WDD 131 - Dynamic Web Fundamentals - Jales Nunes</title>
 
-        <meta name="description"
-            content="WDD 131 - Dynamic Web Fundamentals - Jales Nunes - Learning how to create dynamic, responsive websites using JavaScript to handle events and update content. Building on web fundamentals and programming skills. Developing teamwork abilities like communication and collaboration.">
-        <meta name="author" content="Jales Nunes">
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - Jales Nunes - Learning how to create dynamic, responsive websites using JavaScript to handle events and update content. Building on web fundamentals and programming skills. Developing teamwork abilities like communication and collaboration.">
+    <meta name="author" content="Jales Nunes">
 
-        <link rel="stylesheet" href="styles/form.css">
-        <link rel="stylesheet" href="styles/form-large.css">
+    <link rel="stylesheet" href="styles/form.css">
+    <link rel="stylesheet" href="styles/form-large.css">
 
-        <script src="scripts/form.js" defer></script>
-        <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/form.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
 
-    </head>
-    <body>
-        <header>
-            <h1>Product Review</h1>
-        </header>
+    <main>
+        <form action="review.html" method="get">
+            <div class="product-name">
+                <label for="productName">Product Name:</label>
+                <select id="productName" name="productName" required>
+                    <option value disabled selected>Select a Product ...</option>
+                </select>
+            </div>
 
-        <main>
-            <form action="review.html" method="get">
-                <div class="product-name">
-                    <label for="productName">Product Name:</label>
-                    <select id="productName" name="productName" required>
-                        <option value disabled selected>Select a Product
-                            ...</option>
-                        <!-- Dynamically generated options based on product array -->
-                        <option value="Product A">Product A</option>
-                        <option value="Product B">Product B</option>
-                        <option value="Product C">Product C</option>
-                        <!-- Add more options as needed -->
-                    </select>
-                </div>
+            <div class="overall-rating">
+                <label for="r">Overall Rating:</label>
+                <div id="rangevalue">0</div>
+                <input type="range" id="r" name="r" min="0" max="5" value="0" step="1" list="rangevalues">
+                <datalist id="rangevalues">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </datalist>
+            </div>
 
-                <div class="overall-rating">
-                    <label for="r">Overall Rating:</label>
-                    <div id="rangevalue">0</div>
-                    <input type="range" id="r" name="r" min="0" max="5" value="0" step="1" list="rangevalues">
-                    <datalist id="rangevalues">
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                    </datalist>
-                </div>
+            <div class="installation">
+                <label for="installationDate">Date of Installation:</label>
+                <input type="date" id="installationDate" name="installationDate" required>
+            </div>
 
-                <div class="installation">
-                    <label for="installationDate">Date of Installation:</label>
-                    <input type="date" id="installationDate"
-                        name="installationDate" required>
-                </div>
+            <div>
+                <label>Useful Features:</label><br>
+                <input type="checkbox" id="feature1" name="features" value="Feature 1">
+                <label for="feature1">Feature 1</label><br>
+                <input type="checkbox" id="feature2" name="features" value="Feature 2">
+                <label for="feature2">Feature 2</label><br>
+            </div>
 
-                <div>
-                    <label>Useful Features:</label><br>
-                    <input type="checkbox" id="feature1" name="features"
-                        value="Feature 1">
-                    <label for="feature1">Feature 1</label><br>
-                    <input type="checkbox" id="feature2" name="features"
-                        value="Feature 2">
-                    <label for="feature2">Feature 2</label><br>
-                    <!-- Add more checkboxes as needed -->
-                </div>
+            <div class="review">
+                <label for="writtenReview">Written Review:</label><br>
+                <textarea id="writtenReview" name="writtenReview"></textarea>
+            </div>
 
-                <div class="review">
-                    <label for="writtenReview">Written Review:</label><br>
-                    <textarea id="writtenReview"
-                        name="writtenReview"></textarea>
-                </div>
+            <div class="user-name">
+                <label for="userName">User Name:</label>
+                <input type="text" id="userName" name="userName">
+            </div>
 
-                <div class="user-name">
-                    <label for="userName">User Name:</label>
-                    <input type="text" id="userName" name="userName">
-                </div>
+            <div>
+                <button type="submit">Post Review</button>
+            </div>
+        </form>
+    </main>
 
-                <div>
-                    <button type="submit">Post Review</button>
-                </div>
-            </form>
-        </main>
-
-        <footer>
-            <p>Copyright &copy; <span id="currentyear"></span> Jales
-                Nunes,
-                Utah - US</p>
-            <p id="lastModified"></p>
-        </footer>
-    </body>
+    <footer>
+        <p>Copyright &copy; <span id="currentyear"></span> Jales Nunes, Utah - US</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
 </html>
