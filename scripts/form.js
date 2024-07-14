@@ -1,14 +1,3 @@
-const rangevalue = document.getElementById("rangevalue");
-const range = document.getElementById("r");
-
-// RANGE event listener
-range.addEventListener('change', displayRatingValue);
-range.addEventListener('input', displayRatingValue);
-
-function displayRatingValue() {
-    rangevalue.innerHTML = range.value;
-}
-
 document.addEventListener('DOMContentLoaded', function() {
     const products = [
         {
@@ -39,12 +28,20 @@ document.addEventListener('DOMContentLoaded', function() {
     ];
 
     const productNameSelect = document.getElementById('productName');
+    const ratingOptions = document.querySelectorAll('.rating-options input[type="radio"]');
+    const ratingValueDisplay = document.getElementById('ratingvalue');
 
     products.forEach(product => {
         const option = document.createElement('option');
         option.value = product.id;
         option.textContent = product.name;
         productNameSelect.appendChild(option);
+    });
+
+    ratingOptions.forEach(radio => {
+        radio.addEventListener('change', function() {
+            ratingValueDisplay.textContent = this.value;
+        });
     });
 
     // Update the review count on the review.html page

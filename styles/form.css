@@ -10,6 +10,7 @@
     --text: #E1F0C4;
     --form-bg: #f49390c2;
     --form-text: #fff;
+    --highlight-color: #51513D;
 }
 
 body {
@@ -64,25 +65,30 @@ form {
 }
 
 
-#r {
-	width: 380px;
-	margin-bottom: 0;
+.rating-options {
+    display: flex;
+    align-items: center;
 }
 
-#rangevalue {
-	font-size: 2rem;
-	color: var(--form-text);
+.rating-options input[type="radio"] {
+    display: none;
 }
 
-#rangevalues {
-	display: flex;
-	margin: 0 0 0 25px;
-	width: 390px;
+.rating-options label {
+    font-size: 2rem;
+    color: var(--form-text);
+    cursor: pointer;
+    padding: 0 10px;
 }
 
-#rangevalues option {
-	flex: 1 1 auto;
+.rating-options input[type="radio"]:checked + label {
+    color: var(--highlight-color); 
 }
+
+#ratingvalue {
+    font-size: 2rem;
+}
+
 .review {
     display: flex;
     flex-direction: column;
