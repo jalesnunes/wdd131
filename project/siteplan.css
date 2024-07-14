@@ -1,0 +1,46 @@
+:root {
+  --primary-color: #0081af; /* Primary color for headings, links, accents */
+  --secondary-color: #c8e9a0; /* Secondary color for buttons, CTAs */
+  --text: #1c0f13; /* text color  */
+  --accent-color-1: #ff5a5f; /* Accent color 1 for alerts, highlights */
+  --accent-color-2: #f7b05b; /* Accent color 2 for icons, secondary elements */
+  --background-color: #d1cfe2; /* Background color for main content */
+}
+
+body {
+    width: 1200px;
+  font-family: "Roboto", sans-serif;
+  color: #333;
+  background-color: #f0f0f0;
+
+  margin: 0 auto;
+}
+h1,
+h2,
+h3 {
+  font-weight: 700;
+  color: var(--primary-color);
+}
+p {
+  color: var(--text);
+}
+
+#primary {
+  color: var(--primary-color);
+}
+
+#secondary {
+  color: var(--secondary-color);
+}
+
+#ac1 {
+  color: var(--accent-color-1);
+}
+
+#ac2 {
+  color: var(--accent-color-2);
+}
+
+#bg {
+  color: var(--background-color);
+}
